@@ -2,11 +2,11 @@
   background-color: black;
 }
 
-a {
+.name {
     text-decoration: none;
   }
 
-a {
+.name {
     background:
       linear-gradient(
         to right,
@@ -25,7 +25,7 @@ a {
     transition: background-size 400ms;
   }
 
-a:hover {
+.name:hover {
   background-size: 0 3px, 100% 3px;
 }
 
