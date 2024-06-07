@@ -1,0 +1,67 @@
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/6f8f0ac11a.js" crossorigin="anonymous"></script>
+    <title>Page Not Found</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        .char{
+            color: darkorange;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+        #text:hover .char {
+            color: red;
+        }
+        h1{
+            color:#585252;
+            font-size: 50px;
+            text-shadow: 2px 2px #ccc;
+            transition: color 0.5s ease;
+        }
+        a{
+            transition: color 0.5s ease;
+        }
+        a:hover{
+            color:#b00c0c;
+        }
+        h1:hover{
+            color:#b00c0c;
+        }
+        .error-message {
+            /*color: darkorange;*/
+            margin: 20px 0;
+        }
+        *{
+            background-color: #000000;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Oops!</h1>
+    <div class="error-message">
+        <p id="text">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        <i class="fa-solid fa-house fa-beat-fade fa-xl" style="color: #e06500;"></i><a href="https://isaac-digangi.github.io/index.html">&nbsp;&nbsp;Home Page</a>
+        
+    </div>
+    <script>
+        var text = document.getElementById('text');
+        var strText = text.textContent;
+        var splitText = strText.split("");
+        text.textContent = "";
+        for (let i = 0; i < splitText.length; i++) {
+            if (splitText[i] === " ") {
+                text.innerHTML += "&nbsp;";
+            } else {
+                text.innerHTML += "<span class='char' style='transition-delay:" + i / 20 + "s'>" + splitText[i] + "</span>";
+            }
+        }
+    </script>
+</body>
+</html>
